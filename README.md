@@ -32,7 +32,52 @@ DevOpsLab-HelloWorld/
 ├── LICENSE
 ├── README.md          # Este arquivo
 └── .gitignore         # Arquivos ignorados pelo git
-
+```
 
 ## 🐳 Executando com Docker
 ## Build da imagem
+
+```bash
+docker build -t devopslab-helloworld .
+```
+
+## Rodando o container
+
+```bash
+docker run -p 5000:5000 devopslab-helloworld
+```
+
+Acesse no navegador: http://localhost:5000/
+
+## 🧪 Executando Localmente (sem Docker)
+## Pré-requisitos
+
+- Python 3.x instalado na sua máquina
+
+## Passos
+1. Instale as dependências:
+```bash
+pip install -r requirements.txt
+```
+
+2. Execute a aplicação:
+```bash
+python app/main.py
+```
+
+## 🔄 Pipeline CI/CD
+
+Este repositório contém um workflow automatizado com GitHub Actions, que realiza:
+
+- Instalação de dependências
+- Execução de testes
+- Build da imagem Docker
+- Publicação em repositórios (opcional)
+
+O arquivo do pipeline está localizado em:
+```bash
+.github/workflows/main.yml
+```
+
+## 📝 Licença
+Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para detalhes.
